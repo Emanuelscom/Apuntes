@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes JS</title>
+    <link rel=stylesheet href="./scss/main.css">
+    <link rel="shortcut icon" href="./img/javascript-icon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body class="bodyJs">
+
+    <!-- Inicia Nav -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand" href="index.html"><img class="logo" src="./img/logo-no-background.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navListDiv collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./apuntesHtml.html">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./apuntesCss.html">CSS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="activeNav nav-link" href="./apuntesJs.html">JAVASCRIPT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./apuntesReact.html">REACTJS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./apuntesPhp.php">PHP</a>
+                </li>
+            </ul>
+            <form class="navForm form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btnNav btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Termina Nav -->
+
+
+
+
+
+    <div class="containerTitulo">
+        <h1>Apuntes</h1>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img
+                src="./img/javascript-logo.png" class="logoTitulo" alt="JsLogo"></a>
+    </div>
+    <h6 class="atencion">Emanuel Vega</h6>
+
+
+
+    <div class="containerGeneral">
+        <p class="titulo">
+            ¿Qué es JavaScript?
+        </p>
+        <p class="generalUno">
+            Es un <span class="importante">lenguaje de programación ligero</span>, <span
+                class="importante">interpretado</span>, o <span class="importante">compilado</span>, que se utiliza
+            principalmente para aportar dinamismo a sitios y aplicaciones web.<br>
+            Funciona en complemento con los lenguajes web HTML y Css.<br>
+            <span class="importante">JavaScript</span> se utiliza tanto para construir aplicaciones de <span
+                class="importante">frontend</span> como de <span class="importante">backend</span>.
+        </p>
+
+        <p class="titulo">
+            ¿Qué es Frontend?
+        </p>
+        <p class="generalUno">
+            Por <span class="importante">frontend</span> entendemos a la <span class="importante">parte de la aplicación
+                que corre en el navegador y con la que interactúan los usuarios, es conocida como el lado del
+                cliente</span>.<br>
+            Básicamente <span class="importante">es todo lo que vemos en la pantalla cuando accedemos a un sitio web o
+                aplicación</span>: tipos de letra, colores, adaptación para distintas pantallas, los efectos del ratón,
+            teclado, movimientos, desplazamientos, efectos visuales… y otros elementos que permiten navegar dentro de
+            una página web. Este conjunto crea la experiencia del usuario.<br>
+            Nuestra aplicación de <span class="importante">frontend</span> también <span class="importante">consume
+                datos y servicios ofrecidos por algún backend</span>.<br>
+            <span class="importante">JavaScript</span> será la herramienta que nos <span class="importante">permitirá
+                comunicarnos e intercambiar información con API's u otras aplicaciones</span>.
+        </p>
+        <p class="titulo">
+            ¿Qué es Backend?
+        </p>
+        <p class="generalUno">
+            cuando hablamos de <span class="importante">Backend</span> nos referimos al interior de las aplicaciones que
+            viven en el servidor y al que a menudo se le denomina <span class="importante">el lado del
+                servidor</span>.<br>
+            El backend del sitio web <span class="importante">consiste en un servidor</span>, una <span
+                class="importante">aplicación</span> y una <span class="importante">base de datos</span>. Se toman los
+            datos, se procesa la información y se envía al usuario.<br>
+            Los desarrolladores de <span class="importante">Frontend y Backend suelen trabajar juntos para que todo
+                funcione correctamente</span>.
+        </p>
+        <p class="titulo">
+            ¿Qué es un API?
+        </p>
+        <p class="generalUno">
+            <span class="importante">API o Application Programming Interface</span> (Interfaz de programación de
+            aplicaciones en español) es un conjunto de funciones y procedimientos que permite integrar sistemas,
+            permitiendo que sus funcionalidades puedan ser reutilizadas por otras aplicaciones o software.<br>
+            Una <span class="importante">API</span> sirve para <span class="importante">intercambiar datos entre
+                diferentes tipos de software y así automatizar procedimientos y desarrollar nuevas
+                funcionalidades</span>.
+        </p>
+        <p class="titulo">
+            ¿Qué es un Algoritmo?
+        </p>
+        <p class="generalUno">
+            En programación un <span class="importante">algoritmo</span> es un <span class="importante">conjunto de
+                procedimientos o funciones ordenadas</span> que se necesitan para realizar cierta operación o
+            acción.<br>
+            Pensar en <span class="importante">algoritmos</span> es una práctica que debemos fortalecer como
+            desarrolladores.<br>
+            Consiste en encarar un problema complejo y dividir su resolución en diversos pasos, pensar cómo resolver
+            cada uno y luego secuenciarlos correctamente para llegar al resultado esperado.
+        </p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- DOM -->
+    <div class="separacion">
+        <h2 class="titulo">DOM:</h2>
+        <h3 class="descripcion">
+            Es una <span class="importante">estructura de objetos generada por el navegador, la cual representa la página HTML actual</span>.<br>
+            Con JavaScript la empleamos para acceder y modificar de forma dinámica elementos de la interfaz. Por
+            ejemplo, con JavaScript podemos modificar el texto contenido de una etiqueta &#60h1&#62
+        </h3>
+        <h3 class="subtitulo pt-5">Tipos de nodos:</h3>
+        <h3 class="descripcion">
+            La especificación completa de DOM define <span class="importante">12 tipos de nodos</span>, los más usados son:
+        </h3>
+        <h3 class="subtituloDos pt-3">document:</h3>
+        <h3 class="descripcion">
+            Nodo raíz del que derivan todos los demás nodos del árbol.
+        </h3>
+        <h3 class="subtituloDos pt-3">Element:</h3>
+        <h3 class="descripcion">
+            Representa cada una de las etiquetas XHTML. Puede contener atributos y derivan otros nodos de él.
+        </h3>
+        <h3 class="subtituloDos pt-3">Attr:</h3>
+        <h3 class="descripcion">
+            Se define un nodo de este tipo para representar cada uno de los atributos de las etiquetas HTML, es decir,
+            uno por cada par. atributo = valor
+        </h3>
+        <h3 class="subtituloDos pt-3">Text:</h3>
+        <h3 class="descripcion">
+            Nodo que contiene el texto encerrado por una etiqueta HTML.
+        </h3>
+        <h3 class="subtituloDos pt-3">Comment:</h3>
+        <h3 class="descripcion">
+            Representa los comentarios incluidos en la página HTML.
+        </h3>
+        <h3 class="subtitulo pt-5">Acceder a los nodos:</h3>
+        <h3 class="subtituloDos pt-3">getElementById():</h3>
+        <h3 class="descripcion">
+            Sirve para acceder a un elemento de la estructura HTML utilizando su atributo <span
+                class="importante">id</span> como identificación.
+        </h3>
+        <h3 class="subtituloDos pt-3">getElementByClassName():</h3>
+        <h3 class="descripcion">
+            Accede a un elemento HTML utilizando su <span class="importante">class</span>.
+        </h3>
+        <h3 class="subtituloDos pt-3">getElementByTagName():</h3>
+        <h3 class="descripcion">
+            Accede a un conjunto de elementos HTML utilizando su <span class="importante">etiqueta</span>.
+        </h3>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- DECLARACIÓN DE VARIABLES Y CONSTANTES: -->
+    <div class="separacion">
+        <h2 class="titulo">Declaración de variables y constantes:</h2>
+
+        <h3 class="descripcion">
+            <span class="importante">Variables:</span> Su contenido puede variar durante la ejecución del programa, es
+            decir, podemos modificar su valor.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span> <span class="variable">miVariable</span>;<br>
+            <span class="codCol">var</span> <span class="variable">miOtraVariable</span>;
+        </h4>
+
+        <h3 class="descripcion">
+            <span class="importante">Constantes:</span> Su contenido no puede modificarse durante la ejecución del
+            programa. Si lo modificamos por error, JavaScript nos lo notificará como acción inválida.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">Pi</span> = <span class="numero">3.14</span>;
+        </h4>
+
+        <p class="generalUno">
+            El uso de <span class="importante">camelCase</span> es una buena práctica.<br>
+            <span class="importante">Debe escribirse la primera palabra con minúscula y desde la segunda palabra en
+                adelante comenzar con mayúscula.<br></span>
+            No debe llevar guiones ni comenzar con mayúscula.
+        </p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- TIPO DE DATOS: -->
+    <div class="separacion">
+        <h2 class="titulo">Tipo de datos:</h2>
+        <h3 class="descripcion pb-3">
+            En JavaScript no se especifica el tipo de dato de una variable o constante.<br>
+            Simplemente se le asigna un valor y JavaScript interpreta su contenido.<br>
+        </h3>
+        <h3 class="subtitulo">
+            Datos numéricos = Tipo integer:
+        </h3>
+        <h4 class="separacionSubtitulo codigo">
+            <span class="codCol">let</span> <span class="variable">numero</span> = <span class="numero">5</span>;
+        </h4>
+        <h3 class="subtitulo">
+            Tipo float = Decimal:
+        </h3>
+        <h4 class="separacionSubtitulo codigo">
+            <span class="codCol">let</span> <span class="variable">numeroDecimal</span> = <span
+                class="numero">5.2</span>;
+        </h4>
+        <h3 class="subtitulo">
+            Cadena de caracteres = Strings:
+        </h3>
+        <h4 class="separacionSubtitulo codigo">
+            <span class="codCol">let</span> <span class="variable">nombre</span> = <span
+                class="comentario">"Emanuel"</span>;<br>
+            <span class="codCol">let</span> <span class="variable">letra</span> = <span class="comentario">"A"</span>;
+        </h4>
+        <h3 class="subtitulo">
+            Booleanos:
+        </h3>
+        <h4 class="separacionSubtitulo codigo">
+            <span class="codCol">let</span> <span class="variable">esVerdad</span> = <span
+                class="codCol">true</span>;<br>
+            <span class="codCol">let</span> <span class="variable">esFalso</span> = <span class="codCol">false</span>;
+        </h4>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- INGRESO DE DATOS POR TECLADO: -->
+    <div class="separacion">
+        <h2 class="titulo">Ingreso de datos por teclado: Método prompt()</h2>
+        <h3 class="descripcion">
+            La herramienta que nos ofrece JavaScript para esta tarea es un método llamado <span
+                class="importante">prompt()</span>.<br>
+            Este método muestra un cuadro de diálogo en pantalla donde podemos ingresar caracteres desde el teclado.<br>
+            El dato que obtengamos siempre será de tipo <span class="importante">string</span>.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span> <span class="variable">nombre</span> = <span class="dato">prompt</span><span
+                class="amarillo">(</span><span class="comentario">"Ingresa tu nombre"</span><span
+                class="amarillo">)</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">nombre</span><span class="amarillo">)</span>;
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea el botón para ver el prompt():</h5>
+
+            <button id="firstPrompt" href="#" class="tryButton">Probar</button>
+        </div>
+        <p class="descripcion">Al entrar en la consola (<span class="importante">F12</span> en Windows) y poner
+            cualquier tipo de <span class="importante">texto (o números)</span> en el <span
+                class="importante">prompt()</span> nos va a dar de resultado ese texto en <span
+                class="importante">"string"</span>.</p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- PARSEO DE DATOS -->
+    <div class="separacion">
+        <h2 class="titulo">Parseo de datos:</h2>
+        <h3 class="descripcion">
+            Cuando le pedimos al usuario que ingrese un numero por <span class="importante">prompt()</span>, es buena
+            práctica transformar el tipo de dato <span class="importante">string a integer</span> o <span
+                class="importante">float</span>.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span> <span class="variable">number</span> = <span
+                class="dato">parseInt</span><span class="amarillo">(</span><span class="dato">prompt</span><span
+                class="segundoPar">(</span><span class="comentario">"Ingrese un número"</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// En este caso
+                cambiamos de string a number.</span><br>
+            <span class="codCol">let</span> <span class="variable">decimalNumber</span> = <span
+                class="dato">parseFloat</span><span class="amarillo">(</span><span class="dato">prompt</span><span
+                class="segundoPar">(</span><span class="comentario">"Ingrese un número"</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// En este caso
+                cambiamos de string a float.</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea el botón para ver el prompt():</h5>
+
+            <button id="secondPrompt" href="#" class="tryButton">Probar</button>
+        </div>
+        <p class="descripcion">Al entrar en la <span class="importante">consola</span> y poner un <span
+                class="importante">número en el prompt()</span> nos va a dar de <span
+                class="importante">resultado</span> ese <span class="importante">número</span>, de no ser un número va a
+            dar como resultado <span class="importante">NaN</span> (Not a Number).</p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- Visualizar nuestro contenido: -->
+    <div class="separacion">
+        <h2 class="titulo">Visualizar contenido de variables: alert y console.log</h2>
+        <h3 class="descripcion pb-3">
+            Para visualizar el contenido la nuestras variables JavaScript nos ofrece dos métodos nativos:
+        </h3>
+        <h3 class="subtitulo">alert():</h3>
+        <h4 class="codigo">
+            <span class="dato">alert</span><span class="amarillo">(</span><span class="comentario">"Soy un cuadro de
+                diálogo"</span><span class="amarillo">)</span>;
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea el botón para ver el alert():</h5>
+
+            <button id="firstAlert" href="#" class="tryButton">Probar</button>
+        </div>
+        <p class="descripcion pb-3"><span class="importante">alert()</span> abre un cuadro de dialogo.</p>
+
+
+        <h3 class="subtitulo">console.log():</h3>
+        <h4 class="codigo">
+            <span class="dato">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="comentario">"Imprimo un texto en el browser"</span><span class="amarillo">)</span>;
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar el console.log():</h5>
+
+            <button id="firstLog" href="#" class="tryButton">Probar</button>
+        </div>
+        <p class="descripcion">Para visualizar un <span class="importante">console.log()</span> hay que abrir la
+            consola.</p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- Operaciones: -->
+    <div class="separacion">
+        <h2 class="titulo">Operaciones:</h2>
+
+        <h3 class="descripcion">
+            Con números y strings el operador que tenemos en común es el <span class="importante">+</span>.
+        </h3>
+        <h3 class="subtitulo">Datos numéricos:</h3>
+        <h3 class="descripcion">Si hablamos estrictamente de datos numéricos el <span class="importante">+</span> sumará
+            los valores.</h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span> <span class="variable">numeroUno</span> = <span class="numero">3</span>;<br>
+            <span class="codCol">let</span> <span class="variable">numeroDos</span> = <span class="numero">4</span>;<br>
+            <span class="codCol">let</span> <span class="variable">resultado</span> = <span
+                class="variable">numeroUno</span> + <span class="variable">numeroDos</span>;<br>
+            <span class="dato">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="comentario">"El resultado de "</span> + <span class="variable">numeroUno</span> + <span
+                class="comentario">" + "</span> + <span class="variable">numeroDos</span> + <span class="comentario">"
+                es "</span> + <span class="variable">resultado</span><span class="amarillo">)</span>;
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar un alert():</h5>
+
+            <button id="firstOperation" href="#" class="tryButton">Probar</button>
+        </div>
+        <h3 class="subtitulo">Numérico + string:</h3>
+        <h3 class="descripcion">Si aplicamos la suma en un dato <span class="importante">numérico y un string</span>, se
+            realizará una <span class="importante">concatenación</span>.</h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span> <span class="variable">numeroTres</span> = <span
+                class="numero">5</span>;<br>
+            <span class="codCol">let</span> <span class="variable">numeroString</span> = <span
+                class="comentario">"10"</span>;<br>
+            <span class="dato">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">numeroTres</span> + <span class="variable">numeroString</span><span
+                class="amarillo">)</span>;
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar un alert():</h5>
+
+            <button id="secondOperation" href="#" class="tryButton">Probar</button>
+        </div>
+        <p class="descripcion">Pasaría lo mismo al <span class="importante">sumar dos strings</span>.</p>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- IF ELSE: -->
+    <div class="separacion">
+        <h2 class="titulo">Estructura if:</h2>
+        <h3 class="descripcion"><span class="importante">Ejecuta una sentencia si una condición</span> especificada
+            <span class="importante">es</span> evaluada como <span class="importante">verdadera</span>. Si la condición
+            es evaluada como <span class="importante">falsa</span>, otra sentencia puede ser ejecutada.</h3>
+        <h4 class="codigo">
+            <span class="codCol">let</span><span class="variable"> unColor</span> = <span
+                class="comentario">"Rojo"</span>;<br><br>
+            <span class="cond">if</span> <span class="amarillo">(</span><span class="variable">unColor</span> == <span
+                class="comentario">"Rojo"</span><span class="amarillo">) {</span><br>
+            <div class="tabUno">
+                <span class="dato">console</span>.<span class="dato">log</span><span class="segundoPar">(</span><span
+                    class="comentario">"Es verdadero."</span><span class="segundoPar">)</span>;<br>
+            </div>
+            <span class="amarillo">} </span><span class="cond">else</span> <span class="amarillo">{</span><br>
+            <div class="tabUno">
+                <span class="dato">console</span>.<span class="dato">log</span><span class="segundoPar">(</span><span
+                    class="comentario">"Es falso."</span><span class="segundoPar">)</span>;<br>
+            </div>
+            <span class="amarillo">}</span>
+        </h4>
+        <div class="colorContainer">
+            <h3 class="colorSelectTit resultado pb-2">Elige el color rojo:</h3>
+            <div class="colors">
+                <div id="red"></div>
+                <div id="blue"></div>
+            </div>
+            <p id="colorTrueFalse" class="resultado pt-3"></p>
+        </div>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- OBJETOS -->
+    <div class="separacion">
+        <h2 class="titulo">Objetos:</h2>
+        <h3 class="descripcion">Es una Estructura que podemos definir para agrupar valores.<br>
+            Para obtener el valor del objeto utilizamos el nombre de la variable seguido de un punto y el nombre de la
+            propiedad.</h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">individuo</span> = <span class="amarillo">{</span>
+            <div class="tabUno">
+                <span class="variable">nombre:</span> <span class="comentario">"Emanuel"</span>,<br>
+                <span class="variable">edad:</span> <span class="numero">25</span>,<br>
+                <span class="variable">direccion:</span> <span class="comentario">"Avenida Pando"</span>
+            </div>
+            <span class="amarillo">}</span><br>
+            <span class="dato">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">individuo</span>.<span class="variable">nombre</span><span class="amarillo">)</span>;
+            <span class="colComentario">// Esto nos va a devolver el valor de la propiedad "nombre".</span><br>
+            <span class="dato">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">individuo</span><span class="amarillo">)</span>; <span class="colComentario">// Esto nos
+                va a devolver el objeto completo.</span><br><br>
+            <span class="const">individuo</span>.<span class="variable">edad</span> = <span class="numero">26;</span>
+            <span class="colComentario">// Le cambiamos el valor a una de las propiedades.</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar el console.log():</h5>
+            <button id="firstObject" href="#" class="tryButton">Probar</button>
+        </div>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- OBJETO CONSTRUCTOR -->
+    <div class="separacion">
+        <h2 class="titulo">Objeto Constructor:</h2>
+        <h3 class="descripcion">Es una funcion que usamos para crear un nuevo objeto a partir de una clase cada vez que
+            sea necesario.</h3>
+        <h4 class="codigo">
+            <span class="codCol">function</span> <span class="marino">Persona</span><span class="amarillo">(</span><span
+                class="variable">nombre</span>, <span class="variable">edad</span>, <span
+                class="variable">calle</span><span class="amarillo">) {</span><br>
+            <div class="tabUno">
+                <span class="codCol">this</span>.<span class="variable">nombre</span> = <span
+                    class="variable">nombre</span>;<br>
+                <span class="codCol">this</span>.<span class="variable">edad</span> = <span
+                    class="variable">edad</span>;<br>
+                <span class="codCol">this</span>.<span class="variable">calle</span> = <span
+                    class="variable">calle</span>;<br>
+                <span class="codCol">this</span>.<span class="dato">hablar</span> = <span class="codCol">function</span>
+                <span class="segundoPar">() {</span><br>
+            </div>
+            <div class="tabDos">
+                <span class="variable">console</span>.<span class="dato">log</span><span class="tercerPar">(</span><span
+                    class="comentario">"Hola soy "</span> + <span class="codCol">this</span>.<span
+                    class="variable">nombre</span> + <span class="comentario">", tengo "</span> + <span
+                    class="codCol">this</span>.<span class="variable">edad</span> + <span class="comentario">" años, y
+                    vivo en "</span> + <span class="codCol">this</span>.<span class="variable">calle</span> + <span
+                    class="comentario">"."</span><span class="tercerPar">)</span>;<br>
+            </div>
+            <span class="tabUno segundoPar">}</span><br>
+            <span class="amarillo">}</span><br><br>
+            <span class="codCol">const</span> <span class="const">personaUno</span> = <span class="codCol">new</span>
+            <span class="marino">Persona</span> <span class="amarillo">(</span><span class="comentario">"Carlos"</span>,
+            <span class="numero">32</span>, <span class="comentario">"Avenida Libertador 112"</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Creamos el objeto de personaUno.</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar el console.log():</h5>
+
+            <button id="secondObject" href="#" class="tryButton">Probar</button>
+        </div>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- OPERADOR IN y FOR.. IN -->
+    <div class="separacion">
+        <h2 class="titulo">For...In:</h2>
+        <h3 class="descripcion">El operador <span class="importante">in</span> devuelve <span class="importante">true si
+                la propiedad especificada existe en el objeto</span>. De no ser así devuelve <span
+                class="importante">false</span>.<br>
+            Mientras que el bucle <span class="importante">for...in permite acceder a todas las propiedades del
+                objeto</span>, obteniendo una propiedad por cada iteración.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">personaForIn</span> = <span class="amarillo">{</span>
+            <span class="variable">nombre:</span> <span class="comentario">"Homero"</span>, <span
+                class="variable">edad:</span> <span class="numero">39</span>, <span class="variable">calle:</span> <span
+                class="comentario">"Av. Siempreviva 742"</span> <span class="amarillo">}</span>; <span
+                class="colComentario">// Creamos objeto.</span><br><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="comentario">"nombre"</span> <span class="codCol">in</span> <span
+                class="const">personaForIn</span><span class="amarillo">)</span>; <span class="colComentario">//
+                Devuelve true porque la palabra clave "nombre" existe en el objeto personaForIn.</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="comentario">"peso"</span> <span class="codCol">in</span> <span
+                class="const">personaForIn</span><span class="amarillo">)</span>; <span class="colComentario">//
+                Devuelve false porque la palabra clave "peso" no existe en el objeto personaForIn.</span><br><br>
+            <span class="cond">for</span> <span class="amarillo">(</span><span class="codCol">const</span> <span
+                class="const">propiedad</span> <span class="codCol">in</span> <span
+                class="const">personaForIn</span><span class="amarillo">) {</span><br>
+            <div class="tabUno"><span class="variable">console</span>.<span class="dato">log</span><span
+                    class="segundoPar">(</span><span class="const">personaForIn</span><span
+                    class="tercerPar">[</span><span class="const">propiedad</span><span class="tercerPar">]</span><span
+                    class="segundoPar">)</span>;
+            </div>
+            <span class="amarillo">}</span><br>
+            <span class="colComentario">// Devuelve todas las propiedades del objeto.</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para recorrer el objeto:</h5>
+            <button id="firstForIn" href="#" class="tryButton">Probar</button>
+        </div>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- CLASES -->
+    <div class="separacion">
+        <h2 class="titulo">Clases:</h2>
+        <h3 class="descripcion">
+            Son una equivalencia al empleo de una función constructora. Permite definir distintos métodos.<br>
+            La función constructora es reemplazada por el método constructor.<br>
+            Los métodos en las clases no referencian a propiedades, se declaran dentro del bloque sin la palabra
+            function.
+        </h3>
+        <h4 class="codigo">
+            <span class="colComentario">// Creamos una clase:</span><br>
+            <span class="codCol">class</span> <span class="marino">Producto</span> <span class="amarillo">{</span>
+            <div class="tabUno">
+                <span class="codCol">constructor</span><span class="segundoPar">(</span><span
+                    class="variable">nombre</span>, <span class="variable">precio</span><span class="segundoPar">)
+                    {</span>
+            </div>
+            <div class="tabDos">
+                <span class="codCol">this</span>.<span class="variable">nombre</span> = <span
+                    class="variable">nombre</span>.<span class="dato">toUpperCase</span><span
+                    class="tercerPar">()</span>;<br>
+                <span class="codCol">this</span>.<span class="variable">precio</span> = <span
+                    class="dato">parseFloat</span><span class="tercerPar">(</span><span
+                    class="variable">precio</span><span class="tercerPar">)</span>;<br>
+                <span class="codCol">this</span>.<span class="variable">vendido</span> = <span
+                    class="codCol">false</span>;
+            </div>
+            <div class="tabUno">
+                <span class="segundoPar">}</span><br>
+                <span class="dato">vender</span><span class="segundoPar">() {</span>
+            </div>
+            <div class="tabDos">
+                <span class="codCol">this</span>.<span class="variable">vendido</span> = <span
+                    class="codCol">true</span>;
+            </div>
+            <div class="tabUno">
+                <span class="segundoPar">}</span><br>
+                <span class="dato">sumarIva</span><span class="segundoPar">() {</span>
+            </div>
+            <div class="tabDos">
+                <span class="codCol">this</span>.<span class="variable">precio</span> = <span
+                    class="codCol">this</span>.<span class="variable">precio</span> * <span
+                    class="numero">1.21</span>;<br>
+                <span class="variable">console</span>.<span class="dato">log</span><span class="tercerPar">(</span><span
+                    class="comentario">"El producto: "</span> + <span class="codCol">this</span>.<span
+                    class="variable">nombre</span> + <span class="comentario">" tiene un valor de: "</span> + <span
+                    class="codCol">this</span>.<span class="variable">precio</span> + <span class="comentario">" con
+                    IVA."</span><span class="tercerPar">)</span>;
+            </div>
+            <div class="tabUno">
+                <span class="segundoPar">}</span><br>
+                <span class="dato">informacion</span><span class="segundoPar">() {</span>
+            </div>
+            <div class="tabDos">
+                <span class="variable">console</span>.<span class="dato">log</span><span class="tercerPar">(</span><span
+                    class="comentario">"El producto: "</span> + <span class="codCol">this</span>.<span
+                    class="variable">nombre</span> + <span class="comentario">" tiene un valor de: "</span> + <span
+                    class="codCol">this</span>.<span class="variable">precio</span> + <span
+                    class="comentario">"."</span><span class="tercerPar">)</span>;
+            </div>
+            <div class="tabUno segundoPar">}</div>
+            <div class="amarillo">}</div>
+            <br>
+            <span class="codCol">const</span> <span class="const">productoUno</span> = <span class="codCol">new</span>
+            <span class="marino">Producto</span><span class="amarillo">(</span><span class="comentario">"banana"</span>,
+            <span class="comentario">"100"</span><span class="amarillo">)</span>; <span class="colComentario">// Creamos
+                un nuevo producto.</span><br>
+            <span class="codCol">const</span> <span class="const">productoDos</span> = <span class="codCol">new</span>
+            <span class="marino">Producto</span><span class="amarillo">(</span><span class="comentario">"pera"</span>,
+            <span class="comentario">"150"</span><span class="amarillo">)</span>;<br><br>
+            <span class="const">productoUno</span>.<span class="dato">vender</span><span
+                class="amarillo">()</span>;<span class="colComentario"> // Cambiamos el false de vendido a
+                true.</span><br>
+            <span class="const">productoUno</span>.<span class="dato">sumaIva</span><span class="amarillo">()</span>;
+            <span class="colComentario">// Sumamos en IVA y hacemos un console.log().</span><br>
+            <span class="const">productoDos</span>.<span class="dato">informacion</span><span
+                class="amarillo">()</span>; <span class="colComentario">// Hacemos un console.log().</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar un alert():</h5>
+            <button id="firstClass" href="#" class="tryButton mb-4">Con IVA</button>
+            <button id="secondClass" href="#" class="tryButton">Sin IVA</button>
+        </div>
+    </div>
+
+
+
+    <hr class="dashed">
+
+
+    <!-- ARRAYS -->
+    <div class="separacion">
+        <h2 class="titulo">Arrays:</h2>
+        <h3 class="descripcion">
+            Un <span class="importante">array</span> es un tipo de <span class="importante">dato</span> que <span
+                class="importante">sirve para almacenar valores en forma de lista</span>.<br>
+            Puede ser una colección de números, strings, booleanos, objetos o hasta una lista de listas.<br>
+            <span class="importante">Los elementos del array tienen un índice que va de 0</span> (El primer elemento del
+            array) <span class="importante">hasta el último elemento</span>.
+        </h3>
+        <h4 class="codigo">
+            <span class="colComentario">// Creamos un array:</span><br>
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listaNumeros</span><span class="segundoPar">[</span><span class="numero">0</span><span
+                class="segundoPar">]</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar como
+                resultado 0 ya que 0 es el primer elemento del array.</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listaNumeros</span><span class="segundoPar">[</span><span class="numero">4</span><span
+                class="segundoPar">]</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar como
+                resultado 4.</span><br><br>
+            <span class="codCol">let</span> <span class="variable">resultadoLista</span> = <span
+                class="const">listaNumeros</span><span class="amarillo">[</span><span class="numero">1</span><span
+                class="amarillo">]</span> + <span class="const">listaNumeros</span><span class="amarillo">[</span><span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">resultadoLista</span><span class="amarillo">)</span>; <span class="colComentario">// Va
+                a dar como resultado 6.</span>
+        </h4>
+        <h3 class="subtitulo pt-3">Recorrido del array:</h3>
+        <h3 class="descripcion">
+            Decimos que estamos recorriendo un array cuando empleamos un bucle para acceder a cada elemento por
+            separado.
+        </h3>
+        <h4 class="codigo">
+            <span class="cond">for</span> <span class="amarillo">(</span><span class="codCol">let</span> <span
+                class="variable">index</span> = <span class="numero">0</span>; <span class="variable">index</span> &#60
+            <span class="numero">5</span>; <span class="variable">index</span>++<span class="amarillo">) {</span>
+            <div class="tabUno">
+                <span class="variable">console</span>.<span class="dato">log</span><span
+                    class="segundoPar">(</span><span class="variable">listaNumeros</span><span
+                    class="tercerPar">[</span><span class="variable">index</span><span class="tercerPar">]</span><span
+                    class="segundoPar">)</span>;
+            </div>
+            <span class="amarillo">}</span>
+        </h4>
+        <h3 class="subtitulo pt-3">Métodos y Propiedades:</h3>
+        <h3 class="subtituloDos pt-3">length:</h3>
+        <h3 class="descripcion">
+            Sirve para obtener el largo de un array, es decir, identifica cuantos elementos tiene.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listaNumeros</span>.<span class="variable">length</span><span class="amarillo">)</span>;
+        </h4>
+        <h3 class="descripcion">
+            Es común utilizarlo para definir el límite de una iteración sobre un array.
+        </h3>
+        <h4 class="codigo">
+            <span class="cond">for</span> <span class="amarillo">(</span><span class="codCol">let</span> <span
+                class="variable">i</span> = <span class="numero">0</span>; <span class="variable">i</span> &#60 <span
+                class="variable">listaNumeros</span>.<span class="variable">length</span>; <span
+                class="variable">i</span>++<span class="amarillo">) {</span>
+            <div class="tabUno">
+                <span class="variable">console</span>.<span class="dato">log</span><span
+                    class="segundoPar">(</span><span class="variable">listaNumeros</span><span
+                    class="tercerPar">[</span><span class="variable">i</span><span class="tercerPar">]</span><span
+                    class="segundoPar">)</span>;
+            </div>
+            <span class="amarillo">}</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">push:</h3>
+        <h3 class="descripcion">
+            Agrega elementos al final del array.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">push</span><span class="amarillo">(</span><span
+                class="numero">6</span><span class="amarillo">)</span>; <span class="colComentario">// El array
+                quedaría: 0,1,2,3,4,5,6.</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">unshift:</h3>
+        <h3 class="descripcion">
+            Agrega elementos al inicio del array.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">unshift</span><span
+                class="amarillo">(</span><span class="numero">-1</span><span class="amarillo">)</span>; <span
+                class="colComentario">// El array quedaría: -1,0,1,2,3,4,5.</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">pop:</h3>
+        <h3 class="descripcion">
+            Elimina el último elemento del array.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">pop</span><span class="amarillo">(</span><span
+                class="amarillo">)</span>; <span class="colComentario">// El array quedaría: 0,1,2,3,4.</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">shift:</h3>
+        <h3 class="descripcion">
+            Elimina el primer elemento del array.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">shift</span><span class="amarillo">(</span><span
+                class="amarillo">)</span>; <span class="colComentario">// El array quedaría: 1,2,3,4,5.</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">splice:</h3>
+        <h3 class="descripcion">
+            Permite eliminar 1 o varios elementos del array en cualquier posición. Funciona con 2 parametros: El primero
+            es el inicio y el segundo es la cantidad de elementos a eliminar desde esa posición.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">splice</span><span class="amarillo">(</span><span
+                class="numero">1</span>,<span class="numero">3</span><span class="amarillo">)</span>; <span
+                class="colComentario">// El array quedaría: 0,4,5.</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">join:</h3>
+        <h3 class="descripcion">
+            Genera un string con todos los elementos del array, separados por el valor que pasamos por parámetro.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listaNumeros</span>.<span class="dato">join</span><span class="segundoPar">(</span><span
+                class="comentario">","</span><span class="segundoPar">)</span><span class="amarillo">)</span>;
+        </h4>
+        <h3 class="subtituloDos pt-3">concat:</h3>
+        <h3 class="descripcion">
+            Combina 2 arrays en un único array.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="codCol">const</span> <span class="const">listaNumerosDos</span> = <span
+                class="amarillo">[</span><span class="numero">6</span>,<span class="numero">7</span>,<span
+                class="numero">8</span>,<span class="numero">9</span>,<span class="numero">10</span><span
+                class="amarillo">]</span>;<br>
+            <span class="codCol">const</span> <span class="const">listaNumerosJuntos</span> = <span
+                class="const">listaNumeros</span>.<span class="dato">concat</span><span class="amarillo">(</span><span
+                class="const">listaNumerosDos</span><span class="amarillo">)</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listaNumerosJuntos</span><span class="amarillo">)</span>; <span class="colComentario">//
+                Va a dar como resultado: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">slice:</h3>
+        <h3 class="descripcion">
+            Devuelve una copia de una parte del array dentro de un nuevo array. Empezando por el inicio hasta el fin
+            (fin no incluido). El array original no se modifica.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="codCol">const</span> <span class="const">numerosElegidos</span> = <span
+                class="const">listaNumeros</span>.<span class="dato">slice</span><span class="amarillo">(</span><span
+                class="numero">1</span>,<span class="numero">3</span><span class="amarillo">)</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">numerosElegidos</span><span class="amarillo">)</span>; <span class="colComentario">// Va a
+                dar como resultado: [1, 2]</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">indexOf:</h3>
+        <h3 class="descripcion">
+            Permite obtener el índice de un elemento en un array. Recibe por parametro el elemento que queremos buscar
+            en el array y el caso de existir retornará su indice, si no existe retornará -1.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listadoNombres</span> = <span
+                class="amarillo">[</span><span class="comentario">"Juana"</span>,<span
+                class="comentario">"Claudia"</span>,<span class="comentario">"Elsa"</span>,<span
+                class="comentario">"Petra"</span>,<span class="comentario">"Ana"</span>,<span
+                class="comentario">"Fernanda"</span><span class="amarillo">]</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listadoNombres</span>.<span class="dato">indexOf</span><span
+                class="segundoPar">(</span><span class="comentario">"Claudia"</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar como
+                resultado: 1</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">listadoNombres</span>.<span class="dato">indexOf</span><span
+                class="segundoPar">(</span><span class="comentario">"Daniel"</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar como
+                resultado: -1</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">reverse:</h3>
+        <h3 class="descripcion">
+            Invierte el order de los elementos del array.<br>
+            <span class="importante">Este es un metodo destructivo ya que modifica el array original.</span>
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">listaNumeros</span>.<span class="dato">reverse</span><span
+                class="amarillo">()</span>; <span class="colComentario">// Va cambiar el array listaNumeros a:
+                [5,4,3,2,1,0]</span>
+        </h4>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- FOR... OF -->
+    <div class="separacion">
+        <h2 class="titulo">For... Of:</h2>
+        <h3 class="descripcion">Permite recorrer un array ejecutando un bloque de código por cada elemento del objeto.
+        </h3>
+        <h4 class="codigo">
+            <span class="colComentario">// Creamos un array de objetos:</span><br>
+            <span class="codCol">const</span> <span class="const">productos</span> = <span class="amarillo">[</span>
+            <div class="tabUno">
+                <span class="segundoPar">{</span><span class="variable">id:</span><span class="numero">1</span>, <span
+                    class="variable">producto:</span><span class="comentario">"Arroz"</span>, <span
+                    class="variable">precio:</span><span class="numero">100</span><span class="segundoPar">}</span>,<br>
+                <span class="segundoPar">{</span><span class="variable">id:</span><span class="numero">2</span>, <span
+                    class="variable">producto:</span><span class="comentario">"Fideos"</span>, <span
+                    class="variable">precio:</span><span class="numero">80</span><span class="segundoPar">}</span>,<br>
+                <span class="segundoPar">{</span><span class="variable">id:</span><span class="numero">3</span>, <span
+                    class="variable">producto:</span><span class="comentario">"Pan"</span>, <span
+                    class="variable">precio:</span><span class="numero">50</span><span class="segundoPar">}</span>
+            </div>
+            <span class="amarillo">]</span>;<br><br>
+            <span class="colComentario">// Creamos un for de nombre precio que va a recorrer el array
+                productos:<br></span>
+            <span class="cond">for</span> <span class="amarillo">(</span><span class="codCol">const</span> <span
+                class="const">precios</span> <span class="codCol">of</span> <span class="const">productos</span><span
+                class="amarillo">) {</span>
+            <div class="tabUno">
+                <span class="const">precios</span>.<span class="variable">precio</span> += <span
+                    class="numero">20</span>; <span class="colComentario">// Cambiamos el valor de precio en el array.
+                    (Sumamos 20)</span><br>
+                <span class="variable">console</span>.<span class="dato">log</span><span
+                    class="segundoPar">(</span><span class="const">precios</span>.<span
+                    class="variable">precio</span><span class="segundoPar">)</span>; <span class="colComentario">//
+                    Imprime 120, 100, 70</span>
+            </div>
+            <span class="amarillo">}</span>
+        </h4>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- FUNCIONES DE ORDEN SUPERIOR -->
+    <div class="separacion">
+        <h2 class="titulo">Funciones de orden superior:</h2>
+        <h3 class="descripcion">Son aquellas que retornan una función o reciben una función por parámetro.</h3>
+        <h4 class="codigo">
+            <span class="codCol">function</span> <span class="dato">mayorQue</span><span class="amarillo">(</span><span
+                class="variable">a</span><span class="amarillo">) {</span>
+            <div class="tabUno">
+                <span class="cond">return</span><span class="segundoPar">(</span><span class="variable">b</span><span
+                    class="segundoPar">)</span> <span class="codCol">=&#62</span> <span class="variable">b</span> &#62
+                <span class="variable">a</span>
+            </div>
+            <span class="amarillo">}</span><br><br>
+            <span class="codCol">let</span> <span class="dato">mayorQueDiez</span> = <span
+                class="dato">mayorQue</span><span class="amarillo">(</span><span class="numero">10</span><span
+                class="amarillo">)</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="dato">mayorQueDiez</span><span class="segundoPar">(</span><span class="numero">12</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar
+                true.</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="dato">mayorQueDiez</span><span class="segundoPar">(</span><span class="numero">8</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar
+                false.</span>
+        </h4>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- MÉTODOS DE BUSQUEDA Y TRANSFORMACIÓN -->
+    <div class="separacion">
+        <h2 class="titulo">Métodos de busqueda y transformación:</h2>
+        <h3 class="subtituloDos pt-3">forEach:</h3>
+        <h3 class="descripcion">
+            Itera sobre el array y por cada elemento ejecuta la función que enviemos por parámetro, la cual recibe a su
+            vez el elemento del array que está recorriendo.
+        </h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">listaNumeros</span> = <span
+                class="amarillo">[</span><span class="numero">0</span>,<span class="numero">1</span>,<span
+                class="numero">2</span>,<span class="numero">3</span>,<span class="numero">4</span>,<span
+                class="numero">5</span><span class="amarillo">]</span>;<br>
+            <span class="const">listaNumeros</span>.<span class="dato">forEach</span><span
+                class="amarillo">(</span><span class="segundoPar">(</span><span class="variable">num</span><span
+                class="segundoPar">)</span> <span class="codCol">=></span> <span class="segundoPar">{</span>
+            <div class="tabUno">
+                <span class="variable">console</span>.<span class="dato">log</span><span class="tercerPar">(</span><span
+                    class="variable">num</span><span class="tercerPar">)</span>; <span class="colComentario">// Retorna
+                    todos los números del array por separado.</span>
+            </div>
+            <span class="segundoPar">}</span><span class="amarillo">)</span>;
+            <h3 class="subtituloDos pt-3">find:</h3>
+            <h3 class="descripcion">
+                Recibe una función de comparación por parámetro. Captura el elemento que se está recorriendo y retorna
+                <span class="importante">true</span> o <span class="importante">false</span> según la comparación
+                ejecutada.<br>
+                El método retorna el primer elemento que cumpla la condición. Si no hay coincidencia en el array, el
+                método retorna undefined.
+            </h3>
+            <!-- <h4 class="codigo"> CODIGO FIND??</h4> -->
+            <h3 class="subtituloDos pt-3">filter:</h3>
+            <h3 class="descripcion">
+                Recibe al igual que find, una función comparadora por parámetro y retorna un nuevo array con todos los
+                elementos que cumplan esa condición.<br>
+                Si no hay coincidencias retornará un array vacío.
+            </h3>
+            <!-- <h4 class="codigo"> CODIGO FILTER??</h4> -->
+            <h3 class="subtituloDos pt-3">some:</h3>
+            <h3 class="descripcion">
+                Funciona igual que find recibiendo una función de búsqueda. En vez de retornar el elemento encontrado,
+                retorna true o false.
+            </h3>
+            <!-- <h4 class="codigo"> CODIGO SOME??</h4> -->
+            <h3 class="subtituloDos pt-3">map:</h3>
+            <h3 class="descripcion">
+                Crea un nuevo array con todos los elementos del original transformados según las operaciones de la
+                función enviada por parámetro. Tiene la misma cantidad de elementos, pero los almacenados son el return
+                de la función.
+            </h3>
+            <h4 class="codigo">
+                <span class="codCol">const</span> <span class="const">cursos</span> = <span class="amarillo">[</span>
+                <div class="tabUno">
+                    <span class="segundoPar">{</span><span class="variable">nombre:</span> <span
+                        class="comentario">"Desarrollo Web"</span>, <span class="variable">precio:</span> <span
+                        class="numero">16000</span><span class="segundoPar">}</span>,<br>
+                    <span class="segundoPar">{</span><span class="variable">nombre:</span> <span
+                        class="comentario">"JavaScript"</span>, <span class="variable">precio:</span> <span
+                        class="numero">15000</span><span class="segundoPar">}</span>
+                </div>
+                <span class="amarillo">]</span><br><br>
+                <span class="codCol">const</span> <span class="const">nombreCursos</span> = <span
+                    class="const">cursos</span>.<span class="dato">map</span><span class="amarillo">(</span><span
+                    class="segundoPar">(</span><span class="variable">el</span><span class="segundoPar">)</span> <span
+                    class="codCol">=&#62</span> <span class="variable">el</span>.<span
+                    class="variable">nombre</span><span class="amarillo">)</span><br>
+                <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                    class="const">nombreCursos</span><span class="amarillo">)</span>; <span class="colComentario">// Va
+                    a dar como resultado ["Desarrollo Web"] , ["JavaScript"].</span>
+            </h4>
+            <h3 class="subtituloDos pt-3">reduce:</h3>
+            <h3 class="descripcion">
+                Nos permite obtener un único valor tras iterar sobre el array. Recibe 2 parámetros:<br>
+                El primero es la función que ordena qué queremos resumir del array.<br>
+                El segundo es el valor inicial del acumulador.<br>
+                Por ejemplo, al sumar el precio de todos los productos elegidos:
+            </h3>
+            <h4 class="codigo">
+                <span class="codCol">const</span> <span class="const">miCompra</span> = <span class="amarillo">[</span>
+                <div class="tabUno">
+                    <span class="segundoPar">{</span><span class="variable">nombre:</span> <span
+                        class="comentario">"Desarrollo Web"</span>, <span class="variable">precio:</span> <span
+                        class="numero">16000</span><span class="segundoPar">}</span>,<br>
+                    <span class="segundoPar">{</span><span class="variable">nombre:</span> <span
+                        class="comentario">"JavaScript"</span>, <span class="variable">precio:</span> <span
+                        class="numero">15000</span><span class="segundoPar">}</span>
+                </div>
+                <span class="amarillo">]</span><br><br>
+                <span class="codCol">const</span> <span class="const">total</span> = <span
+                    class="const">miCompra</span>.<span class="dato">reduce</span><span class="amarillo">(</span><span
+                    class="segundoPar">(</span><span class="variable">acumulador</span>, <span
+                    class="variable">elemento</span><span class="segundoPar">)</span> <span class="codCol">=&#62</span>
+                <span class="variable">acumulador</span> + <span class="variable">elemento</span>.<span
+                    class="variable">precio</span>, <span class="numero">0</span><span class="amarillo">)</span>;<br>
+                <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                    class="const">total</span><span class="amarillo">)</span>; <span class="colComentario">// Va a dar
+                    como resultado la suma de los precios. 31000 en este caso.</span>
+            </h4>
+            <h3 class="subtituloDos pt-3">sort:</h3>
+            <h3 class="descripcion">
+                <span class="importante">Este es un método destructivo.</span> Nos permite reordenar un array según el
+                criterio que definamos.
+            </h3>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- MATH -->
+    <div class="separacion">
+        <h2 class="titulo">Math:</h2>
+        <h3 class="descripcion">Es un objeto que funciona como contenedor de herramientas y métodos para realizar
+            operaciones matemáticas.</h3>
+        <h3 class="subtitulo pt-3">Propiedades:</h3>
+        <h3 class="subtituloDos pt-3">PI y EULER:</h3>
+        <h3 class="descripcion">
+            Se puede acceder a algunas constantes matemáticas a través del objeto math, como puede ser el numero <span
+                class="importante">pi</span> o la constante de <span class="importante">euler</span>.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="variable">PI</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 3.141592653589793</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="variable">E</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 2.718281828459045</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">min() y max():</h3>
+        <h3 class="descripcion">
+            Reciben una serie de argumentos numéricos y devuelven aquel de valor mínimo o máximo, según corresponda.<br>
+            Se pueden referenciar valores de infinito positivo o negativo. <span class="importante">Infinity</span>,
+            <span class="importante">-Infinity</span>
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">max</span><span class="segundoPar">(</span><span
+                class="numero">55</span>, <span class="numero">13</span>, <span class="numero">0</span>, <span
+                class="numero">-25</span>, <span class="numero">93</span>, <span class="numero">4</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Da como
+                resultado 93</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">min</span><span class="segundoPar">(</span><span
+                class="numero">55</span>, <span class="numero">13</span>, <span class="numero">0</span>, <span
+                class="numero">-25</span>, <span class="numero">93</span>, <span class="numero">4</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Da como
+                resultado -25</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">ceil():</h3>
+        <h3 class="descripcion">
+            Devuelve el entero mayor o igual más proximo.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">ceil</span><span class="segundoPar">(</span><span
+                class="variable">pi</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 4</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">floor():</h3>
+        <h3 class="descripcion">
+            Devuelve el entero mas cercano redondeando hacia abajo.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">floor</span><span class="segundoPar">(</span><span
+                class="variable">pi</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 3</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">round():</h3>
+        <h3 class="descripcion">
+            Retorna el valor de un número redondeando al entero mas cercano.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">round</span><span class="segundoPar">(</span><span
+                class="variable">pi</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 3</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">sqrt():</h3>
+        <h3 class="descripcion">
+            Retorna la raiz cuadrada de un número, si el número es negativo retorna NaN.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">sqrt</span><span class="segundoPar">(</span><span
+                class="variable">9</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 3</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">sqrt</span><span class="segundoPar">(</span><span
+                class="variable">2</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 1.414213562373095</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">sqrt</span><span class="segundoPar">(</span><span
+                class="variable">1</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: 1</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">sqrt</span><span class="segundoPar">(</span><span
+                class="variable">-1</span><span class="segundoPar">)</span><span class="amarillo">)</span>; <span
+                class="colComentario">// Resultado: NaN</span>
+        </h4>
+        <h3 class="subtituloDos pt-3">random():</h3>
+        <h3 class="descripcion">
+            Genera un número aleatorio entre 0 y 1, siendo 0 el límite inclusivo y 1 el exclusivo.<br>
+            Para generar números aleatorios dentro de un rango deseado, podemos multiplicar su resultado por el rango
+            esperado, a la vez podemos sumar su límite inferior.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">random</span><span class="segundoPar">(</span><span
+                class="segundoPar">)</span> * <span class="numero">30</span> + <span class="numero">20</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Resultado: Número del 20 al 50 sin
+                redondear.</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="variable">Math</span>.<span class="dato">round</span><span class="segundoPar">(</span><span
+                class="variable">Math</span>.<span class="dato">random</span><span class="tercerPar">(</span><span
+                class="tercerPar">)</span> * <span class="numero">10</span><span class="segundoPar">)</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Resultado: Número del 0 al 10
+                redondeado.</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para generar un número:</h5>
+            <button id="firstMath" href="#" class="tryButton mb-4">20 al 50</button>
+            <button id="secondMath" href="#" class="tryButton mb-4">0 al 10</button>
+        </div>
+    </div>
+
+
+    <hr class="dashed">
+
+
+    <!-- DATE -->
+    <div class="separacion">
+        <h2 class="titulo">Date:</h2>
+        <h3 class="descripcion">
+            Instanciar un objeto date nos genera la fecha y tiempo actual.<br>
+            El constructor de la clase date nos permite crear objetos date con fechas diferentes. Puede recibir
+            parámetros en el orden: <span class="importante">año</span>, <span class="importante">mes</span>, <span
+                class="importante">día</span>, <span class="importante">hora</span>, <span
+                class="importante">minutos</span>, <span class="importante">segundos</span> y <span
+                class="importante">milisegundos</span>.<br>
+            También se pueden crear fechas a partir de un <span class="importante">string</span>.
+        </h3>
+        <h4 class="codigo">
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="codCol">new</span> <span class="marino">Date</span><span class="segundoPar">()</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Fecha actual.</span><br><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="codCol">new</span> <span class="marino">Date</span><span class="segundoPar">(</span><span
+                class="numero">1997</span>, <span class="numero">02</span>, <span class="numero">25</span><span
+                class="segundoPar">)</span><span class="amarillo">)</span>; <span class="colComentario">// Fecha
+                definida por parámetros.</span><br><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="codCol">new</span> <span class="marino">Date</span><span class="segundoPar">(</span><span
+                class="comentario">"december 24, 2021 23:59:59"</span><span class="segundoPar">)</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Fecha a partir de string.</span>
+        </h4>
+        <h3 class="subtitulo pt-3">Valor Singular:</h3>
+        <h3 class="descripcion">Podemos aplicar distintos métodos que nos devuelven determinados valores de la misma.
+        </h3>
+
+        <h3 class="subtituloDos pt-3">getDay()</h3>
+        <h3 class="descripcion">Retorna el número del día. (domingo: 0, Lunes: 1, etc)</h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">navidad</span> = <span class="codCol">new</span> <span
+                class="marino">Date</span><span class="amarillo">(</span><span class="comentario">'December 25, 2022
+                00:00:00'</span><span class="amarillo">)</span>;<br>
+            <span class="codCol">const</span> <span class="const">dia</span> = <span class="const">navidad</span>.<span
+                class="dato">getDay</span><span class="amarillo">()</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">dia</span><span class="amarillo">)</span>; <span class="colComentario">// Resultado:
+                0</span>
+        </h4>
+
+        <h3 class="subtituloDos pt-3">getMonth()</h3>
+        <h3 class="descripcion">Retorna el número del mes. (enero: 0, febrero: 1, etc)</h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">navidad</span> = <span class="codCol">new</span> <span
+                class="marino">Date</span><span class="amarillo">(</span><span class="comentario">'December 25, 2022
+                00:00:00'</span><span class="amarillo">)</span>;<br>
+            <span class="codCol">const</span> <span class="const">mes</span> = <span class="const">navidad</span>.<span
+                class="dato">getMonth</span><span class="amarillo">()</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">mes</span><span class="amarillo">)</span>; <span class="colComentario">// Resultado:
+                11</span>
+        </h4>
+
+        <h3 class="subtituloDos pt-3">getFullYear()</h3>
+        <h3 class="descripcion">Retorna el número del año.</h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">navidad</span> = <span class="codCol">new</span> <span
+                class="marino">Date</span><span class="amarillo">(</span><span class="comentario">'December 25, 2022
+                00:00:00'</span><span class="amarillo">)</span>;<br>
+            <span class="codCol">const</span> <span class="const">año</span> = <span class="const">navidad</span>.<span
+                class="dato">getFullYear</span><span class="amarillo">()</span>;<br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">año</span><span class="amarillo">)</span>; <span class="colComentario">// Resultado:
+                2022</span>
+        </h4>
+
+        <h3 class="subtitulo pt-3">Presentación:</h3>
+        <h4 class="codigo">
+            <span class="codCol">const</span> <span class="const">hoy</span> = <span class="codCol">new</span> <span
+                class="marino">Date</span><span class="amarillo">()</span>;<br><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">hoy</span>.<span class="dato">toDateString</span><span class="segundoPar">()</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Resultado: Wed Nov 02 2022</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">hoy</span>.<span class="dato">toLocaleString</span><span class="segundoPar">()</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Resultado: 2/11/2022, 16:15:37</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">hoy</span>.<span class="dato">toLocaleDateString</span><span
+                class="segundoPar">()</span><span class="amarillo">)</span>; <span class="colComentario">// Resultado:
+                2/11/2022</span><br>
+            <span class="variable">console</span>.<span class="dato">log</span><span class="amarillo">(</span><span
+                class="const">hoy</span>.<span class="dato">toTimeString</span><span class="segundoPar">()</span><span
+                class="amarillo">)</span>; <span class="colComentario">// Resultado: 16:15:37 GMT+0100 (hora estándar de
+                Europa central)</span>
+        </h4>
+        <div class="divBoton">
+            <h5 class="resultado separacionBotH5">Clickea para ver dia y hora actual:</h5>
+            <button id="firstDate" href="#" class="tryButton mb-4">Prueba</button>
+        </div>
+    </div>
+
+    <hr class="dashed">
+
+
+
+    <!-- scripts -->
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+.bodyJs {
+    background-color: #393B40;
+    color: #F2ECFF;
+}
+
+.divBoton {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tryButton {
+    width: 15rem;
+    font-size: 2rem;
+    color: #222;
+    border-color: #707788;
+    font-weight:bold;
+    border-radius: 10px;
+    background:linear-gradient(rgba(141, 127, 146, 1), rgba(109, 104, 119, 1));
+}
+
+.tryButton:hover {
+    background: linear-gradient(rgba(109, 104, 119, 1), rgba(141, 127, 146, 1));
+    color: rgba(34, 34, 34, 0.9);
+    border-color: #707788dc;
+}
+
+.colorContainer {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-left: 20px;
+    .colorSelectTit {
+        text-align: center;
+        padding-left: 0px;
+    }
+    .colors{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        #red {
+            width: 40%;
+            height: 50px;
+            background-color: red;
+        }
+        #blue {
+            width: 40%;
+            height: 50px;
+            background-color: blue;
+        }
+    }
+    #colorTrueFalse {
+        text-align: center;
+        padding-left: 0px;
+    }
+}
